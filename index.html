@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>My Timer</title>
+</head>
+<body>
+    <h1>My Timer</h1>
+    <svg height="180" width="180">
+        <circle
+            r="80"
+            cx="90"
+            cy="90"
+            fill="transparent"
+            stroke="red"
+            stroke-width="10"
+            stroke-dasharray="10 0"
+        />
+    </svg>
+    <div>
+        <input id="durationInput" value="30"/>
+    </div>
+    <div>
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+    </div>
+    <script src="timer.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
