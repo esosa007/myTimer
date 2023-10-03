@@ -1,8 +1,9 @@
 class Timer {
-    constructor(inputDuration, startButton, pauseButton) {
+    constructor(inputDuration, startButton, pauseButton, circle) {
         this.inputDuration = inputDuration;
         this.startButton = startButton;
         this.pauseButton = pauseButton;
+        this.circle = circle;
 
         startButton.addEventListener('click', this.startTimer);
         pauseButton.addEventListener('click', this.pauseTimer);
@@ -20,13 +21,22 @@ class Timer {
 
     tick = () => {
         this.interval = setInterval(() => {
-            console.log('tick')
-        }, 1000)
+            if(parseFloat(this.inputDuration.value) <= 0) {
+                this.pauseTimer();
+            } else {
+                this.inputDuration.value -= 1;
+            }
+        }, 1000);
+    }
+
+    onDurationChange = () => {
+
     }
 }
 
 const input = document.querySelector('#inputDuration');
 const start = document.querySelector('#startButton');
 const pause = document.querySelector('#pauseButton');
+const circle = document.querySelector('#timerCircle');
 
 const timer = new Timer(input, start, pause);

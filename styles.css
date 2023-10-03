@@ -1,7 +1,10 @@
 body {
-    background-color: gray;
+    background-color: rgba(128, 128, 128, 0.942);
+    position: relative;
 }
 h1 {
-    color: rgb(73, 8, 95);
-    font-size: 3em;
+    color: rgb(128, 1, 128);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4em;
+    text-align: center;
 }
